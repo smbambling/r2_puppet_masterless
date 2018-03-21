@@ -1,0 +1,5 @@
+# The command to exec on the remote node running Puppet Masterless is
+
+sudo /opt/puppetlabs/bin/puppet apply --hiera_config=/tmp/puppet/environments/masterless/hiera.yaml
+--modulepath="/tmp/puppet/environments/masterless/site:/tmp/puppet/environments/masterless/modules/"
+/tmp/puppet/environments/masterless/manifests/site.pp
