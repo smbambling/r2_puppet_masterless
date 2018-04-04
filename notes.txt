@@ -3,3 +3,7 @@
 sudo /opt/puppetlabs/bin/puppet apply --hiera_config=/tmp/puppet/environments/masterless/hiera.yaml
 --modulepath="/tmp/puppet/environments/masterless/site:/tmp/puppet/environments/masterless/modules/"
 /tmp/puppet/environments/masterless/manifests/site.pp
+
+
+# Rsync though a tunnel to techtaco.org
+rsync -avP -e "ssh -A -4 nicky ssh " puppet techtaco.org:/tmp
